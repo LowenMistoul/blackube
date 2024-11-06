@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import './style.css'
+import '../style/style.css'
 import { Box, Menu as MenuIcon } from 'lucide-react'
 import { useState, useRef } from 'react'
 import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
@@ -14,10 +14,9 @@ import {
  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
  
-function Cube({ setShowContent }: { setShowContent: (show: boolean) => void }) {
+function Cube() {
  const meshRef = useRef<THREE.Mesh>(null!)
  const buttonRef = useRef<ThreeElements['mesh']>(null!)
- const [hovered, setHovered] = useState(false)
  
  useFrame((state, delta) => {
    meshRef.current.rotation.x += delta * 0.2
@@ -25,13 +24,10 @@ function Cube({ setShowContent }: { setShowContent: (show: boolean) => void }) {
  })
  
  return (
-   <group 
-   onClick={() => setShowContent(true)}
-   onPointerOver={() => setHovered(true)}
-   onPointerOut={() => setHovered(false)}>
+   <group >
      <mesh ref={meshRef}>
        <boxGeometry  args={[1.5, 1.5, 1.5]} />
-       <meshStandardMaterial color={hovered ? "red" : "white"} wireframe />
+       <meshStandardMaterial color={"white"} wireframe />
      </mesh>
    </group>
  )
@@ -39,7 +35,7 @@ function Cube({ setShowContent }: { setShowContent: (show: boolean) => void }) {
  
 export default function HomePage() {
  const [currentPage, setCurrentPage] = useState('Home')
- const [showContent, setShowContent] = useState(false)
+ //const [showContent, setShowContent] = useState(false)
  
  const handlePageChange = (page: string) => {
    setCurrentPage(page)
@@ -93,13 +89,13 @@ export default function HomePage() {
        <Canvas camera={{ position: [0, 0, 3] }}>
          <ambientLight intensity={0.5} />
          <pointLight position={[10, 10, 10]} intensity={1} />
-         <Cube setShowContent={setShowContent} />
+         <Cube />
          <OrbitControls enableZoom={false} enablePan={false} enableRotate={true} />
        </Canvas>
      </div>
  
      {/* Main Content */}
-     {showContent && (
+     {(
        <main className="relative z-20 flex items-center justify-center h-[calc(100vh-4rem)]">
          <div className="text-center">
            <h1 className="text-4xl font-bold text-white mb-4">Welcome to BLACKUBE</h1>

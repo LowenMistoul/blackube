@@ -1,12 +1,12 @@
 @keyframes move-background {
     from {
-      /* background-position: 0 0; */
-      transform: translate3d(0px, 0px, 0px);
+      background-position: 0 0;
+      /* transform: translate3d(0px, 0px, 0px); */
     }
     to {
-      transform: translate3d(1000px, 0px, 0px);
+      /* transform: translate3d(1000px, 0px, 0px); */
 
-      /* background-position: -10000px 0; */
+      background-position: -10000px 0;
     }
   }
 
@@ -72,10 +72,10 @@
     right: 0;
     display: block;
     z-index: 4;
-    background:
+    /* background:
       radial-gradient(circle at 20% 80%, rgba(26, 0, 77, 0.3) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, rgba(0, 77, 26, 0.3) 0%, transparent 50%);
-    animation: move-background 300s linear infinite;
+    animation: move-background 300s linear infinite; */
   }
 
   .btnnn{
