@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
               app/page.tsx
             </code>
+            <Link href={"/landing"}>test</Link>
             .
           </li>
           <li>Save and see your changes instantly.</li>
