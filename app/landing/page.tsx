@@ -101,7 +101,7 @@ export default function HomePage() {
            <h1 className="text-4xl font-bold text-white mb-4">Welcome to BLACKUBE</h1>
            <p className="text-xl text-gray-300 mb-8">Explore the future of technology</p>
            <Button className="bg-white text-black hover:bg-gray-200">
-            <Link href="/services"  onClick={() => handlePageChange('Services')} className={`${currentPage === 'Services' ? 'text-white' : 'text-gray-400'} hover:text-white transition-colors`}>
+            <Link href="/services"  onClick={() => handlePageChange('Services')} className={`${currentPage === 'Services' ? 'text-white' : 'text-black-400'} hover:text-white transition-colors`}>
              Get Started
              </Link>
            </Button>

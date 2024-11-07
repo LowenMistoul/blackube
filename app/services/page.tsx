@@ -70,7 +70,7 @@ export default function ServicesPage() {
  
      {/* Main Content */}
      <main className="relative z-20 flex items-center justify-center min-h-[calc(100vh-4rem)]">
-       <div className="w-full max-w-6xl p-8 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm">
+       <div className="w-full max-w-6xl p-8 bg-black bg-opacity-50 rounded-lg backdrop-blur-sm glass">
          <h1 className="text-4xl font-bold text-white mb-8 text-center">Our Services</h1>
          <div className="grid md:grid-cols-3 gap-8">
            <Link href="/media" passHref>
